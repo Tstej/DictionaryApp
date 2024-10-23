@@ -1,0 +1,130 @@
+:root{
+    --primary-color : #16423C;
+    --text-color : #C4DAD2;
+    --padding : 20px;
+    --border-radius : 5px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #6A9C89;
+    width: 100vw;
+}
+
+
+
+header{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: var(--padding);
+}
+header h1 {
+    font-size: 36px;
+}
+
+
+
+main{
+    min-height: 78vh;
+    padding: var(--padding);
+    max-width: 800px;
+    margin: 0 auto;
+}
+main form{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+form input[type="text"]{
+    flex-grow: 1;
+}
+form button[type="submit"]{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    margin-left: 10px;
+    cursor: pointer;
+}
+form input[type="text"], form button[type="submit"]{
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    padding: calc(var(--padding)/2);
+}
+
+.result{
+    border: transparent;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px white;
+    margin-top: 20px;
+    padding: var(--padding);
+}
+
+.result h2, .result strong{
+    color: white;
+    margin-left: 10px;
+}
+.result p{
+    padding: 5px;
+    color: #C4DAD2;
+}
+.result .partOfSpeech{
+    font-style: italic;
+    color: #C4DAD2;
+    padding: 0px;
+    padding-bottom: 20px;
+    margin-left: 20px;
+} 
+.result li{
+    color: #C4DAD2;
+    margin-left: 50px;
+}
+.result span{
+    color: #C4DAD2;
+    margin-left: 30px;
+}
+.result div{
+    display: flex;
+    justify-content: end;
+    margin: 30px 30px 0px 30px ;
+}
+.result div a{
+    background-color: #16423C;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0px 0px 5px white;
+    color: #C4DAD2;
+}
+
+
+footer{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: var(--padding);
+    text-align: center;
+    font-size: 18px;
+    position: fixed;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 380px) {
+    main form{
+        flex-direction: column;
+        align-items: center;
+    }
+    button[type="submit"]{
+        margin-top: 10px;
+    }
+}
+
